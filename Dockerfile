@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-RUN apt-get update && apt-get install -y build-essential cmake libtinfo-dev zlib1g-dev xz-utils curl
+RUN apt-get update && apt-get install -y build-essential cmake libtinfo-dev zlib1g-dev xz-utils curl git
 WORKDIR /app
 RUN curl -fsSL https://releases.llvm.org/8.0.0/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz | tar xJ
 RUN git clone --branch 0.20190823.6 https://github.com/MaskRay/ccls/
