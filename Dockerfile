@@ -1,6 +1,4 @@
 FROM ubuntu:18.04 as VANILLA
-FROM huanghongxun/judge-system-base:4.5 as SANDBOX
-COPY --from=VANILLA /etc/apt /etc/apt
 RUN apt-get update && apt-get install -y cmake libtinfo-dev zlib1g-dev xz-utils curl git
 WORKDIR /app
 RUN curl -fsSL https://releases.llvm.org/8.0.0/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz | tar xJ
